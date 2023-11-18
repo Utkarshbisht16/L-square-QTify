@@ -1,11 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from "./components/header"
+import React from 'react';
+import Navbar from "./components/navbar/navbar.jsx"
 function App() {
   return (
-    <div className="App">
-      <Header/>
-    </div>
+    <>
+      <Navbar/>
+    </>
   );
 }
 
