@@ -96,6 +96,20 @@ const Header = ({ children, hasHiddenAuthButtons }) => {
     <ThemeProvider theme={theme}>
         <Button variant="contained">Give Feedback</Button>
     </ThemeProvider>
+    <Paper
+      component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+    >
+        <InputBase
+            sx={{ ml: 1, flex: 1 }}
+            placeholder="Search a song of your choice"
+            inputProps={{ 'aria-label': 'search google maps' }}
+        />
+        <Divider sx={{ height: 28 }} orientation="vertical" />
+        <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions">
+        <SearchIcon />
+        </IconButton>
+    </Paper>
       </Box>
     );
 };
