@@ -1,0 +1,14 @@
+.box{
+    height: 270px;
+    width: 100vw;
+}
+.outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+}
