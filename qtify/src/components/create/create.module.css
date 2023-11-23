@@ -22,6 +22,15 @@
     cursor: pointer;
 
 }
+/* .wrapper{
+    margin-top: 18px;
+    display: flex;
+    gap:40px;
+}
+.wrapperInner{
+    display: flex;
+    gap:40px;
+} */
 /* .grid{
     display:"flex";
     flex-wrap:'wrap';

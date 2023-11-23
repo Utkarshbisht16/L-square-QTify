@@ -23,7 +23,7 @@ export default function Create({url,children}){
     
     const [post, setPost] = useState(null);
     const [col, setCol] = useState('wrap');
-    const [x, setX] = useState({display:'flex', flexWrap:'nowrap', height:280, overflow:'Hidden'});
+    const [x, setX] = useState({display:'flex', flexWrap:'nowrap', height:280, overflow:'Hidden', gap:40});
     console.log(post);
     useEffect(() => {
         axios.get(url).then((response) => {
@@ -33,10 +33,10 @@ export default function Create({url,children}){
     const collapse = (e) =>{
         if(col === 'nowrap'){
             setCol('wrap')
-            setX({display:'flex', flexWrap:'nowrap', height:280, overflow:'Hidden'});
+            setX({display:'flex', flexWrap:'nowrap', height:280, overflow:'Hidden', gap:40});
         }else{
             setCol('nowrap')
-            setX({display:'flex'});
+            setX({display:'flex', flexWrap:'wrap',gap:40});
         }
         
     }
@@ -48,16 +48,16 @@ export default function Create({url,children}){
                     <h4 variant="text" onClick={collapse} className={styles.text2}>{col==='wrap' ? "Show All" : "Collapse"}</h4>
                 </div>
                 <div>
-                {post ? <Grid container spacing={1} paddingX={1} marginY={1} sx={x}>
-                    {post.length ? post.map(song => <Grid key={song.id} item xs={6} md={2}>
+                {post ? <div style={x}>
+                    {post.length ? post.map(song => <div>
                     <Cards 
                         follows={song.follows} 
                         image={song.image} 
                         id={song.id} 
                         title={song.title}
                     />
-                    </Grid>):null}
-                    </Grid>:null}
+                    </div>):null}
+                    </div>:null}
                 </div>
             </div>
         </>
