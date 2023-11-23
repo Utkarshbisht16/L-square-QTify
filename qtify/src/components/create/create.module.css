@@ -1,0 +1,29 @@
+/* .outer{
+    height:280px;
+    width: 1376px;
+} */
+.outer2{
+    display: flex;
+    justify-content: space-between;
+}
+.text1{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0px;
+}
+.text2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: var(--color-primary);
+    text-transform: none;
+    cursor: pointer;
+
+}
+/* .grid{
+    display:"flex";
+    flex-wrap:'wrap';
+    overflow: 'hidden';
+} */

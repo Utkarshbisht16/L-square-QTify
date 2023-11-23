@@ -1,0 +1,15 @@
+.chipp{
+    padding : 4px 8px 4px 8px;
+}
+.outer{
+    height: 232px;
+    width: 159px;
+    /* border: 1px solid white; */
+}
+.bottom{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: left;
+}
