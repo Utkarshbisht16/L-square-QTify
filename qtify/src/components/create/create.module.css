@@ -5,6 +5,7 @@
 .outer2{
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 .text1{
     font-size: 20px;
@@ -22,17 +23,6 @@
     cursor: pointer;
 
 }
-/* .wrapper{
+.cards{
     margin-top: 18px;
-    display: flex;
-    gap:40px;
 }
-.wrapperInner{
-    display: flex;
-    gap:40px;
-} */
-/* .grid{
-    display:"flex";
-    flex-wrap:'wrap';
-    overflow: 'hidden';
-} */
