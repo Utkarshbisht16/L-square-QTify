@@ -20,7 +20,7 @@ export default function Cards(props){
     return(
         <>
             <div className={styles.outer}>
-            <Tooltip title={`${props.songs.length} songs`} placement="top">
+            
               <Card sx={{ maxWidth: 159, maxHeight:205}}>
                   <CardActionArea>
                       <CardMedia
@@ -31,12 +31,14 @@ export default function Cards(props){
                       />
                       <CardContent sx={{height:35, display:'flex', alignItems:'center'}}>
                       <ThemeProvider theme={theme}>
-                      <Chip label={props.follows + " Follows"} className={styles.chipp} size="small" color="primary" />
+                      {props.follows ? <Chip label={props.follows + " Follows"} className={styles.chipp} size="small" color="primary" /> : 
+                      <Chip label={props.likes + " Likes"} className={styles.chipp} size="small" color="primary" />}
+                      
                       </ThemeProvider>
                       </CardContent>
                   </CardActionArea>
               </Card>
-            </Tooltip>
+
             <p className={styles.bottom}>{props.title}</p>
             </div>
         </>

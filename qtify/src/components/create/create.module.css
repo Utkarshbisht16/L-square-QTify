@@ -14,15 +14,15 @@
     letter-spacing: 0px;
 }
 .text2{
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 30px;
-    letter-spacing: 0px;
+    
     color: var(--color-primary);
-    text-transform: none;
+
     cursor: pointer;
 
 }
 .cards{
     margin-top: 18px;
+}
+.filterWrapper{
+    margin-top: 15px;
 }

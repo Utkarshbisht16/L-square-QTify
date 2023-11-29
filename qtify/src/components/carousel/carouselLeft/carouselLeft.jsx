@@ -11,6 +11,7 @@ export default function CarouselLeft(){
     useEffect(()=>{
         swiper.on("slideChange", function(){
             setIsBeginning(swiper.isBeginning);
+            console.log("sss", swiper.isBeginning);
         })
     },[])
     return(

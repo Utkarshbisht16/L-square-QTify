@@ -11,6 +11,7 @@ export default function CarouselRight(){
     useEffect(()=>{
         swiper.on("slideChange", function(){
             setIsEnd(swiper.isEnd);
+            // console.log("is end", swiper.isEnd);
         })
     },[])
     return(

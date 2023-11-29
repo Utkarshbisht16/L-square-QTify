@@ -8,12 +8,12 @@ import { CircularProgress } from "@mui/material";
 import Carousel from "../carousel/carousel";
 import Filters from '../filters/filters'
 
-export default function Create({data,children, filterSource}){
-    const [filters, setFilters] = useState([{key : "all", label:"All"}])
+export default function Create2({data,children, filterSource}){
+    const [filters, setFilters] = useState([{key : "All", label:"All"}])
     const [selectedFilterIndex, setSelectedFilterIndex] = useState(0)
     const [col, setCol] = useState('wrap');
     const [x, setX] = useState({display:'flex', flexWrap:'wrap', overflow:'Hidden', gap:40});
-
+    
     useEffect(()=>{
         if(filterSource){
             filterSource().then((response)=>{
@@ -21,6 +21,7 @@ export default function Create({data,children, filterSource}){
                 setFilters([...filters, ...data]);
             })
         }
+        console.log(data);
     },[])
     const showFilters = filters.length > 1 ;
     const cardsToRender = data?.filter((card)=>
@@ -57,7 +58,7 @@ export default function Create({data,children, filterSource}){
                     <div style={x}>
                     {cardsToRender.map((data) =>
                     <Cards 
-                        follows={data.follows} 
+                        likes={data.likes} 
                         image={data.image} 
                         id={data.id} 
                         title={data.title}
@@ -67,7 +68,7 @@ export default function Create({data,children, filterSource}){
                                 data={cardsToRender} 
                                 renderComponent={(data)=> 
                                 <Cards 
-                                    follows={data.follows} 
+                                    likes={data.likes} 
                                     image={data.image} 
                                     id={data.id} 
                                     title={data.title}

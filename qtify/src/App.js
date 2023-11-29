@@ -5,7 +5,7 @@ import {Outlet} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import Hero from './components/hero/hero.jsx';
 import Album from './components/album/album.jsx';
-import { fetchNewAlbums, fetchTopAlbums } from './api/api.js';
+import { fetchNewAlbums, fetchSongs, fetchTopAlbums } from './api/api.js';
 
 function App() {
   const [data, setData] = useState({});
@@ -19,14 +19,15 @@ function App() {
   useEffect(()=>{
     generateData("topAlbums", fetchTopAlbums)
     generateData("newAlbums", fetchNewAlbums)
+    generateData("songs", fetchSongs)
   },[])
-
-  const {topAlbums = [], newAlbums = []} = data;
+  const {topAlbums = [], newAlbums = [], songs=[]} = data;
+  // const {topAlbums = [], newAlbums = []} = data;
   return (
     <>
       <StyledEngineProvider injectFirst>
         <Navbar/>
-        <Outlet context={{data : {topAlbums,newAlbums}}}/>
+        <Outlet context={{data : {topAlbums,newAlbums,songs}}}/>
       </StyledEngineProvider>
     </>
   );
